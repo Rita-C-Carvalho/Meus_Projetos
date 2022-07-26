@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+
+body{
+    background-image: url(imagens/fundo.png);
+    
+}
+
+main{
+    margin-top: 30px;
+}
+
+p{
+    float: left;
+    margin: auto;
+    margin-top: 30px;
+    color: white;
+    font-size: 1.35em;
+    padding-left: 5px;
+}
+
+article{
+    color: black;
+    font-weight: bold;
+    display: block; 
+    margin: auto;
+    text-align: center;
+    margin-top:280px;    
+    font-size: 1.5em;
+    width: 252px;
+    height: 125px;
+ 
+    
+        
+}
+.aparecer{
+    display:none;
+    
+}
+
+a{
+    font-size: 0.7em;
+    color: darkblue;
+}
+
+header{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 252px;
+    font-size: 1.5em;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    color: white;
+
+}
+
+
+#mostrador{
+    width: 252px;
+    margin: auto;
+    height: 50px;
+    padding-bottom: 30px;
+    background-color: rgb(159,36,216);
+    border-radius: 3px;
+    margin-bottom: 4px;
+}
+
+.espaco{
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    float: left;
+    text-align: center;
+    background-color: rgb(119, 61, 139);
+}
+
+
+
+.tabuleiro{
+    width: 252px; /* esse comando serve para definir que a largura do tabuleiro é de 3 vezes o tamanho da borda mais 6 vezes o tamanho da borda que no caso são respectivamente: "3 X 40" e "6 X 12".*/
+    margin: auto;
+    
+    
+}
+    
+

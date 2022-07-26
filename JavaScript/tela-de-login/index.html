@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <h1>Acesse sua conta</h1>
+    </header>
+    
+        <form>
+
+            
+            <p><input type="email" onblur="validaEmail()" onfocus="redefinirMsg()" class="email" placeholder="email@provedor.com"></p>
+            <p><span class="erro-email"></span></p>   
+         
+            
+            <input type="password" onblur="validaSenha()" onfocus="redefinirMsgSenha()"class="senha" placeholder="Digite sua senha"><br>
+            <span class="erro-senha"></span>
+
+
+            <p><input type="button" value="Entrar" onclick="validar()" class="botao">
+            <div class="valid"></div></p>
+        </form>
+    </main>
+    <script src="script.js"> </script>
+</body>
+</html>

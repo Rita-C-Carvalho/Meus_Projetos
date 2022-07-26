@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capa</title>
+    <style>
+        @font-face{
+            font-family: 'terror';
+            src: url(fontes/ScaryBlood.ttf);
+        }
+        body{
+            background-image: linear-gradient(-90deg, black,red, red, black);
+            background-repeat: none;
+            background-position: top;
+        }
+       
+        a{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: blanchedalmond;
+            font-size: 60px;
+            font-family:'terror'
+        }
+
+        a:hover{
+            color: black;
+        }
+
+        img{
+           display: flex;
+           justify-content: center; 
+           margin: auto;
+           align-items: center;
+           margin-top: 40px; 
+           border-radius: 150px;
+           box-shadow: 20px -15px 30px rgba(0, 0, 0, 0.622); 
+        }
+        /*Responsivo*/
+        @media(max-width:800px){
+            img{
+                height: 90%;
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                margin-top: 60px;
+
+            }
+
+            a{
+                font-size: 30px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="imagens/jogosm.PNG" alt="foto jogos mortais">
+    <a href="jogo.html">Play Game</a>
+    
+</body>
+</html>

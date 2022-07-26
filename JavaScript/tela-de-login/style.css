@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body{
+
+    background-image: radial-gradient(rgb(4, 4, 83), rgb(71, 6, 71));
+}
+
+h1{
+    text-align: center;
+}
+
+main{   
+    color: white;
+    min-width: 300px;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 250px;    
+}
+
+form{
+    text-align:center;   
+    margin: auto;
+} 
+
+.email{
+    width: 250px;
+    height: 25px;
+    background-image: radial-gradient(rgb(4, 4, 83), rgb(71, 6, 71));
+    color: white;
+    margin: auto;
+    display: block;
+}
+
+.senha{
+    width: 250px;
+    height: 25px;
+    background-image: radial-gradient(rgb(4, 4, 83), rgb(71, 6, 71));
+    color: white;
+    margin: auto;
+    display: block;
+}
+
+.botao{
+    width: 260px;
+    height: 30px;
+    background-image: radial-gradient(rgb(71,6,71), blue);
+    color: white;
+    margin: auto;
+    display: block;
+}
+
+.erro-email{
+    color: crimson;
+    
+}
+
+.erro-senha{
+    color: crimson;
+}
+
+
+

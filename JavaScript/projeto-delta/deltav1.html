@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo da Delta</title>
+    <style>
+        body{
+            background-image: url(imagens/matematica.jpeg);
+
+        }
+        h1{
+            background-color: rgba(0, 0, 0, 0.892);
+            color: rgb(10, 242, 242);
+            text-align: center;
+            min-width: 300px;
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            font-size: 3em;
+            margin-top: 30px;
+            
+            
+        }
+        input{
+            background-color: #42f3f0;
+            color: darkblue;
+            font-weight: bold;
+            text-align: center;
+            width: 50px;
+            margin: auto;
+        }
+        .dados{
+            text-align: center;
+        }
+        .calcular{
+            text-align: center;
+        }
+        h2{
+            font: 1.5em normal arial;
+            background-color: #6b0cfa;
+            text-align: center;
+        }
+        main{
+            background-color: rgba(0, 0, 0, 0.892);
+            color: rgb(10, 242, 242);
+            min-width: 300px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 0px;
+            margin: auto;
+            font-size: 1.5em;
+            
+        }
+        .botao{
+            background-color: #42f3f0;
+            color: darkblue;
+            width: 100px;  
+        }
+        .botao2{
+            font: 0.9em normal arial;
+            background-color: #6b0cfa;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+       strong{
+           color: white;
+           
+       }
+       h2{
+           color: white;
+       }
+    </style>
+</head>
+<body>
+    <h1>Calculadora para Equação do 2º grau</h1>
+
+
+<main> <p class="dados"> Digite o valor de <strong>a</strong>: <input type="number" name="txta" id="txta">
+    Digite o valor de <strong>b</strong>: <input type="number" name="txtb" id="txtb">
+    Digite o valor de <strong>c</strong>: <input type="number" name="txtc" id="txtc">
+        </p>
+   <p class="calcular"><input type="button" value="Calcular" onclick="calculara()" class="botao">
+    <div class = "res">
+    </div>
+   </p> 
+    <div class="deltas">
+    </div>
+
+    <div class="fbaskhara">
+    </div>
+
+     <input type="button" value="Clique aqui para ver o passo a passo completo" onclick="passoapasso()" class="botao2">
+    <div class="eq"></div>
+</main>
+
+    <script>
+        function calculara(){
+            var txta = window.document.querySelector(`input#txta`)
+            var txtb = window.document.querySelector(`input#txtb`)
+            var txtc = window.document.querySelector(`input#txtc`)
+            var res = window.document.querySelector(`div.res`)
+            var a = Number(txta.value)
+            var b = Number(txtb.value)
+            var c = Number(txtc.value)
+            var delta = b ** 2 - 4 * a * c
+            var deltaraiz = Number(delta.value)  
+            var raiz = (Math.sqrt(delta))
+            var x1 = (- b + raiz)/ (2 * a)
+            var x2 = (- b - raiz)/ (2 * a)
+            
+            res.innerHTML =  `<p> O valor de <strong>a</strong> é <strong>${a}</strong>, o valor de <strong>b</strong> é <strong>${b}</strong> e o valor de <strong>c</strong> é <strong>${c}<strong>.</p>`
+
+            res.innerHTML += `<p> O valor de <strong>Delta</strong> é <strong>${delta}</strong>.`
+            if(delta < 0){
+                res.innerHTML += `Equação inexistente, pois a <strong>Delta</strong> é negativa.`
+            }
+            else{
+                res.innerHTML += `A raiz de <strong>Delta</strong> é: <strong>${raiz}</strong>` 
+            }
+            if(delta > 0){
+            res.innerHTML += `<p>O valor de <strong>X1</strong> é: <strong>${x1}</strong> e o valor de <strong>X2</strong> é: <strong>${x2}</strong>.</p>`
+            }
+            else{
+                res.innerHTML += `<p>Não existe raizes reais para essa equação.</p>`
+            }
+        }
+            
+        function passoapasso(){
+            var txta = window.document.querySelector(`input#txta`)
+            var txtb = window.document.querySelector(`input#txtb`)
+            var txtc = window.document.querySelector(`input#txtc`)
+            var res = window.document.querySelector(`div.res`)
+            var a = Number(txta.value)
+            var b = Number(txtb.value)
+            var c = Number(txtc.value)
+            var delta = b ** 2 - 4 * a * c
+            var deltaraiz = Number(delta.value)  
+            var raiz = (Math.sqrt(delta))
+            var x1 = (- b + raiz)/ (2 * a)
+            var x2 = (- b - raiz)/ (2 * a)
+            var eq = window.document.querySelector(`div.eq`)
+            eq.innerHTML = `<p>Os valores digitados para <strong>a</strong>, <strong>b</strong> e <strong>c</strong>, correspondentes, são: <strong>${a}</strong>, <strong>${b}</strong> e <strong>${c}</strong>.</p> <h2> Cálculo da Delta &#916 `
+            
+            eq.innerHTML += `</h2> <p> &#916 = b² -4 * a *c </p><p> &#916 = (${b} * ${b}) - 4 * ${a} * ${c}</p> <p> <strong>&#916 = ${delta}</strong></p>`
+
+            if(delta > 0){
+            eq.innerHTML += `<h2> Aplicando a fórmula de Bhaskara</h2> <p> x = (- b +- √&#916) / 2 * a</p> <p><strong>Substituindo temos: &#8594</strong>  x = (- ${b} +- √${delta}) / 2 * ${a}</p> <p>x1 = (- ${b} + √${delta}) / 2 * ${a}</p> <p> x1 = (- ${b} + ${raiz}) / 2 * ${a} <p> <strong>x1 = ${x1}</strong></p><p> x2 = (- ${b} - √${delta}) / 2 * ${a}</p> <p> x2 = (- ${b} - ${raiz}) / 2 * ${a} </p> <p> <strong>x2 = ${x2}</strong></p> `}
+            else{
+             eq.innerHTML += `Não exite raízes reais para essa equação, pois a &#916 é menor que 0.`
+                }
+                
+        }
+            
+    </script>
+
+</body>
+
+
+</html>
