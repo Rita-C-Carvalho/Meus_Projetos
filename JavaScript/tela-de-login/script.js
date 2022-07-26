@@ -17,9 +17,6 @@ function redefinirMsg(){ // A função redefinirMsg() está linkada ao evento on
 }
 
 
-
-
-
 function validar(){ // a função validar nesse códigos serve para se apertar o botão entrar sem digitar nada no e-mail ou nada na senha aparacer um alerta informando que precisa digitar algo.
     var email = document.querySelector('input.email');
     var senha = document.querySelector('input.senha');
@@ -33,7 +30,10 @@ function validar(){ // a função validar nesse códigos serve para se apertar o
         senha.focus()
     }else if(senha.value.length < 6){
         erroSenha.innerHTML = 'A senha precisa ter 6 ou mais dígitos';
-    }   
+    }else{
+        window.location.href = "bemvindo.html";
+    }
+    
 }
 
 
